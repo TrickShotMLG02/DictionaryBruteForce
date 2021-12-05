@@ -36,7 +36,8 @@ namespace DictionaryBruteForce
         {
             //running program
             methodA(input, lengths, verbose, THREAD_COUNT, 3);
-            Console.WriteLine("threadID\tStartingPosition\tLength");
+            Console.WriteLine("\nStarting Spellcheck\n");
+            Console.WriteLine("\nthreadID\tStartingPosition\tLength");
             // Creating and initializing threads
             List<Thread> threads = new List<Thread>();
             
@@ -52,6 +53,8 @@ namespace DictionaryBruteForce
                 thread.Start();
                 runningThreads++;
             }
+
+            
 
             while(runningThreads != 0)
             {
@@ -135,7 +138,7 @@ namespace DictionaryBruteForce
         {
             int length = list.Count / threadsCount;
             List<string> partialList;
-            Console.WriteLine("\n\nid:" + threadID + "\t\t" + threadID * length + "\t\t\t" + length);
+            Console.WriteLine("id:" + threadID + "\t\t" + threadID * length + "\t\t\t" + length);
             if (threadID + 1 == threadsCount)
                 partialList = list.GetRange(threadID * length, list.Count - threadID * length);
             else
