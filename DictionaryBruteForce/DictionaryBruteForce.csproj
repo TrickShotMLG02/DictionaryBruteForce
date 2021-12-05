@@ -10,4 +10,16 @@
     <PackageReference Include="NHunspell" Version="1.2.5554.16953" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="de_CH_frami.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="de_CH_frami.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="hunspellx64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

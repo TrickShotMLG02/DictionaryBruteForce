@@ -64,7 +64,7 @@ namespace DictionaryBruteForce
                 Thread.Sleep(500);
             }
             Console.Write(new string(' ', Console.WindowWidth));
-            Console.WriteLine("\r\nSpellcheck Finished");
+            Console.WriteLine("\nSpellcheck Finished");
             methodB();
         }
 
@@ -109,7 +109,9 @@ namespace DictionaryBruteForce
                 if (verbose)
                     Console.WriteLine("\n\n");
 
-                Console.WriteLine("Do you want to save the list to a file? (y/n)");
+                Console.WriteLine("\nFinished");
+
+                Console.WriteLine("\nDo you want to save the list to a file? (y/n)");
                 if (Console.ReadKey().Key == ConsoleKey.Y)
                 {
                     Console.WriteLine("\nEnter Filename");
@@ -133,7 +135,7 @@ namespace DictionaryBruteForce
         {
             int length = list.Count / threadsCount;
             List<string> partialList;
-            Console.WriteLine("id:" + threadID + "\t\t" + threadID * length + "\t\t\t" + length);
+            Console.WriteLine("\n\nid:" + threadID + "\t\t" + threadID * length + "\t\t\t" + length);
             if (threadID + 1 == threadsCount)
                 partialList = list.GetRange(threadID * length, list.Count - threadID * length);
             else
